@@ -108,7 +108,11 @@ namespace C2SUsersWF
             var user = new User(0, dataUN, data2PW, data3FN, data4LN, data5PN, data6EM, data7, data8);
             var returnCode = User.InsertUser(user);
             if (returnCode)
+            {
                 label10TEST.Text = "Insert successful";
+                label10WARun.Text = "";
+                label10.Text = "";
+            }
             else
             {
                 label10TEST.Text = "Insert failed: *Username not unique, or Connection failed*";

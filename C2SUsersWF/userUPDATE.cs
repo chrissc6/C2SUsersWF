@@ -134,10 +134,14 @@ namespace C2SUsersWF
 
             var updateSuccess = User.UpdateUser(userpk);
             if (updateSuccess)
-                label10TEST.Text = "Update successful";
+            {
+                label10TEST.Text = "Update successful!";
+                label10WARun.Text = "";
+            } 
             else
             {
-                label10TEST.Text = "Update failed";
+                label10TEST.Text = "Update failed: *Username not unique, or Connection failed*";
+                label10WARun.Text = "< Username already in use*";
             }
 
 

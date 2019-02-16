@@ -41,9 +41,17 @@ namespace C2SUsersWF
             int Id = Int32.Parse(dataUPK);
 
             User userpk = User.GetUserByPrimaryKey(Id);
+            if (userpk != null)
+            {
+                label10TEST.Text = "Query successful!";
+                label12.Text = $"{Id}";
+            }
+            else
+            {
+                label10TEST.Text = "Query failed: *No user by that id, or Connection failed*";
+                return;
+            }
 
-            label10TEST.Text = "Query operation successful";
-            label12.Text = $"{Id}";
 
             string un = userpk.Username;
             if(un == null)
