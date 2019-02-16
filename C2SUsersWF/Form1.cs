@@ -56,5 +56,10 @@ namespace C2SUsersWF
             var user = User.GetUserByPrimaryKey(1);
             
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Made by: Chris C", "User DB Connection About");
+        }
     }
 }
