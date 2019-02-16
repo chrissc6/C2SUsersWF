@@ -46,6 +46,9 @@
             this.checkBox1Rcb = new System.Windows.Forms.CheckBox();
             this.checkBox1Acb = new System.Windows.Forms.CheckBox();
             this.button1SUBMIT = new System.Windows.Forms.Button();
+            this.label10TEST = new System.Windows.Forms.Label();
+            this.label10WARun = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -202,6 +205,7 @@
             this.checkBox1Rcb.Size = new System.Drawing.Size(15, 14);
             this.checkBox1Rcb.TabIndex = 15;
             this.checkBox1Rcb.UseVisualStyleBackColor = true;
+            this.checkBox1Rcb.CheckedChanged += new System.EventHandler(this.checkBox1Rcb_CheckedChanged_1);
             // 
             // checkBox1Acb
             // 
@@ -224,11 +228,42 @@
             this.button1SUBMIT.UseVisualStyleBackColor = true;
             this.button1SUBMIT.Click += new System.EventHandler(this.button1SUBMIT_Click);
             // 
+            // label10TEST
+            // 
+            this.label10TEST.AutoSize = true;
+            this.label10TEST.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10TEST.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label10TEST.Location = new System.Drawing.Point(230, 64);
+            this.label10TEST.Name = "label10TEST";
+            this.label10TEST.Size = new System.Drawing.Size(0, 24);
+            this.label10TEST.TabIndex = 18;
+            // 
+            // label10WARun
+            // 
+            this.label10WARun.AutoSize = true;
+            this.label10WARun.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10WARun.Location = new System.Drawing.Point(384, 117);
+            this.label10WARun.Name = "label10WARun";
+            this.label10WARun.Size = new System.Drawing.Size(0, 20);
+            this.label10WARun.TabIndex = 19;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(384, 167);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(0, 20);
+            this.label10.TabIndex = 20;
+            // 
             // userINSERT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label10WARun);
+            this.Controls.Add(this.label10TEST);
             this.Controls.Add(this.button1SUBMIT);
             this.Controls.Add(this.checkBox1Acb);
             this.Controls.Add(this.checkBox1Rcb);
@@ -248,7 +283,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "userINSERT";
-            this.Text = "userINSERT";
+            this.Text = "User DB Connection";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -274,5 +309,8 @@
         private System.Windows.Forms.CheckBox checkBox1Rcb;
         private System.Windows.Forms.CheckBox checkBox1Acb;
         private System.Windows.Forms.Button button1SUBMIT;
+        private System.Windows.Forms.Label label10TEST;
+        private System.Windows.Forms.Label label10WARun;
+        private System.Windows.Forms.Label label10;
     }
 }

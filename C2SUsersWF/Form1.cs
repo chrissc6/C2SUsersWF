@@ -21,22 +21,34 @@ namespace C2SUsersWF
         private void button1WF1INSERT_Click(object sender, EventArgs e)
         {
             userINSERT ui = new userINSERT();
+            this.Hide();
             ui.ShowDialog();
+            this.Show();
         }
+        
 
         private void button1WF1UPDATE_Click(object sender, EventArgs e)
         {
-
+            userUPDATE ui = new userUPDATE();
+            this.Hide();
+            ui.ShowDialog();
+            this.Show();
         }
 
         private void button1WF1DELETE_Click(object sender, EventArgs e)
         {
-
+            userDELETE ui = new userDELETE();
+            this.Hide();
+            ui.ShowDialog();
+            this.Show();
         }
 
         private void button1WF1QUERY_Click(object sender, EventArgs e)
         {
-
+            userQUERY ui = new userQUERY();
+            this.Hide();
+            ui.ShowDialog();
+            this.Show();
         }
 
         private void Form1_Load(object sender, EventArgs e)
