@@ -105,14 +105,17 @@ namespace C2SUsersWF
             newuser.IsReviewer = data7;
             newuser.IsAdmin = data8;
             string newdata = newuser.ToString();
-            var user = new User(0, dataUN,data2PW,data3FN,data4LN,data5PN,data6EM,data7,data8);
+            var user = new User(0, dataUN, data2PW, data3FN, data4LN, data5PN, data6EM, data7, data8);
             var returnCode = User.InsertUser(user);
             if (returnCode)
                 label10TEST.Text = "Insert successful";
             else
             {
-                label10TEST.Text = "Insert failed";
+                label10TEST.Text = "Insert failed: *Username not unique, or Connection failed*";
+                label10WARun.Text = "< Username already in use*";
             }
+
+
 
             //label10TEST.Text = newdata;
             //this.Close();
