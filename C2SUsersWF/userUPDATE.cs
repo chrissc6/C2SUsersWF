@@ -26,8 +26,8 @@ namespace C2SUsersWF
         public string data4LN;
         public string data5PN;
         public string data6EM;
-        public bool data7;
-        public bool data8;
+        public bool? data7 = null;
+        public bool? data8 = null;
         //public string datacheck;
 
 
@@ -62,29 +62,61 @@ namespace C2SUsersWF
             data6EM = $"{textBox1Em.Text}";
         }
 
-        private void checkBox1Rcb_CheckedChanged(object sender, EventArgs e)
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (data7 == true)
-            {
-                data7 = false;
-            }
-            else
+            if (comboBox2.Text == "Add Reviewer Status")
             {
                 data7 = true;
             }
+            else if (comboBox2.Text == "Remove Reviewer Status")
+            {
+                data7 = false;
+            }
+            else if (comboBox2.Text == "No Change")
+            {
+                data7 = null;
+            }
         }
 
-        private void checkBox1Acb_CheckedChanged(object sender, EventArgs e)
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (data8 == true)
-            {
-                data8 = false;
-            }
-            else
+            if(comboBox1.Text == "Add Admin Status")
             {
                 data8 = true;
             }
+            else if (comboBox1.Text == "Remove Admin Status")
+            {
+                data8 = false;
+            }
+            else if (comboBox1.Text == "No Change")
+            {
+                data8 = null;
+            }
         }
+
+        //private void checkBox1Rcb_CheckedChanged(object sender, EventArgs e)
+        //{
+        //    if (data7 == true)
+        //    {
+        //        data7 = false;
+        //    }
+        //    else
+        //    {
+        //        data7 = true;
+        //    }
+        //}
+
+        //private void checkBox1Acb_CheckedChanged(object sender, EventArgs e)
+        //{
+        //    if (data8 == true)
+        //    {
+        //        data8 = false;
+        //    }
+        //    else
+        //    {
+        //        data8 = true;
+        //    }
+        //}
 
         private void button1SUBMIT_Click(object sender, EventArgs e)
         {
@@ -123,14 +155,40 @@ namespace C2SUsersWF
             {
                 userpk.Email = data6EM;
             }
-            if(data7 != userpk.IsReviewer)
+            if(data7 != null)
             {
-                userpk.IsReviewer = data7;
+                if(data7 == true)
+                {
+                    userpk.IsReviewer = true;
+                }
+                else
+                    userpk.IsReviewer = false;
             }
-            if(data8 != userpk.IsAdmin)
+            else
             {
-                userpk.IsAdmin = data8;
+                userpk.IsReviewer = userpk.IsReviewer;
             }
+            if (data8 != null)
+            {
+                if (data8 == true)
+                {
+                    userpk.IsAdmin = true;
+                }
+                else
+                    userpk.IsAdmin = false;
+            }
+            else
+            {
+                userpk.IsAdmin = userpk.IsAdmin;
+            }
+            //if (data8 != null)
+            //{
+            //    userpk.IsAdmin = true;
+            //}
+            //else
+            //{
+            //    userpk.IsAdmin = userpk.IsAdmin;
+            //}
 
             var updateSuccess = User.UpdateUser(userpk);
             if (updateSuccess)
@@ -231,5 +289,7 @@ namespace C2SUsersWF
         {
             this.Close();
         }
+
+        
     }
 }

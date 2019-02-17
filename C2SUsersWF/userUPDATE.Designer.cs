@@ -30,8 +30,6 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label10TEST = new System.Windows.Forms.Label();
-            this.checkBox1Acb = new System.Windows.Forms.CheckBox();
-            this.checkBox1Rcb = new System.Windows.Forms.CheckBox();
             this.textBox1Em = new System.Windows.Forms.TextBox();
             this.textBox1PN = new System.Windows.Forms.TextBox();
             this.textBox1LN = new System.Windows.Forms.TextBox();
@@ -53,6 +51,8 @@
             this.textBox1USERid = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -74,26 +74,6 @@
             this.label10TEST.Name = "label10TEST";
             this.label10TEST.Size = new System.Drawing.Size(0, 24);
             this.label10TEST.TabIndex = 35;
-            // 
-            // checkBox1Acb
-            // 
-            this.checkBox1Acb.AutoSize = true;
-            this.checkBox1Acb.Location = new System.Drawing.Point(323, 414);
-            this.checkBox1Acb.Name = "checkBox1Acb";
-            this.checkBox1Acb.Size = new System.Drawing.Size(15, 14);
-            this.checkBox1Acb.TabIndex = 34;
-            this.checkBox1Acb.UseVisualStyleBackColor = true;
-            this.checkBox1Acb.CheckedChanged += new System.EventHandler(this.checkBox1Acb_CheckedChanged);
-            // 
-            // checkBox1Rcb
-            // 
-            this.checkBox1Rcb.AutoSize = true;
-            this.checkBox1Rcb.Location = new System.Drawing.Point(129, 414);
-            this.checkBox1Rcb.Name = "checkBox1Rcb";
-            this.checkBox1Rcb.Size = new System.Drawing.Size(15, 14);
-            this.checkBox1Rcb.TabIndex = 33;
-            this.checkBox1Rcb.UseVisualStyleBackColor = true;
-            this.checkBox1Rcb.CheckedChanged += new System.EventHandler(this.checkBox1Rcb_CheckedChanged);
             // 
             // textBox1Em
             // 
@@ -148,7 +128,7 @@
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(247, 407);
+            this.label9.Location = new System.Drawing.Point(316, 407);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(70, 24);
             this.label9.TabIndex = 26;
@@ -300,11 +280,41 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Add Admin Status",
+            "Remove Admin Status",
+            "No Change"});
+            this.comboBox1.Location = new System.Drawing.Point(392, 412);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(138, 21);
+            this.comboBox1.TabIndex = 76;
+            this.comboBox1.Text = "No Change";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Add Reviewer Status",
+            "Remove Reviewer Status",
+            "No Change"});
+            this.comboBox2.Location = new System.Drawing.Point(129, 412);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(157, 21);
+            this.comboBox2.TabIndex = 77;
+            this.comboBox2.Text = "No Change";
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            // 
             // userUPDATE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.textBox1USERid);
@@ -313,8 +323,6 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label10WARun);
             this.Controls.Add(this.label10TEST);
-            this.Controls.Add(this.checkBox1Acb);
-            this.Controls.Add(this.checkBox1Rcb);
             this.Controls.Add(this.textBox1Em);
             this.Controls.Add(this.textBox1PN);
             this.Controls.Add(this.textBox1LN);
@@ -342,8 +350,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label10TEST;
-        private System.Windows.Forms.CheckBox checkBox1Acb;
-        private System.Windows.Forms.CheckBox checkBox1Rcb;
         private System.Windows.Forms.TextBox textBox1Em;
         private System.Windows.Forms.TextBox textBox1PN;
         private System.Windows.Forms.TextBox textBox1LN;
@@ -365,5 +371,7 @@
         private System.Windows.Forms.TextBox textBox1USERid;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }
