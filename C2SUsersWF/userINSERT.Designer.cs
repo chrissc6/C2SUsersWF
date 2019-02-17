@@ -46,6 +46,7 @@
             this.checkBox1Rcb = new System.Windows.Forms.CheckBox();
             this.checkBox1Acb = new System.Windows.Forms.CheckBox();
             this.button1SUBMIT = new System.Windows.Forms.Button();
+            this.label10TEST = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -224,11 +225,20 @@
             this.button1SUBMIT.UseVisualStyleBackColor = true;
             this.button1SUBMIT.Click += new System.EventHandler(this.button1SUBMIT_Click);
             // 
+            // label10TEST
+            // 
+            this.label10TEST.AutoSize = true;
+            this.label10TEST.Location = new System.Drawing.Point(437, 90);
+            this.label10TEST.Name = "label10TEST";
+            this.label10TEST.Size = new System.Drawing.Size(0, 13);
+            this.label10TEST.TabIndex = 18;
+            // 
             // userINSERT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label10TEST);
             this.Controls.Add(this.button1SUBMIT);
             this.Controls.Add(this.checkBox1Acb);
             this.Controls.Add(this.checkBox1Rcb);
@@ -274,5 +284,6 @@
         private System.Windows.Forms.CheckBox checkBox1Rcb;
         private System.Windows.Forms.CheckBox checkBox1Acb;
         private System.Windows.Forms.Button button1SUBMIT;
+        private System.Windows.Forms.Label label10TEST;
     }
 }

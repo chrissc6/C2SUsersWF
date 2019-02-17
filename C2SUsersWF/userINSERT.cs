@@ -62,10 +62,16 @@ namespace C2SUsersWF
         {
             string data = "";
 
-            textBox1UN.Text += data.ToString();
+            textBox1UN.Text += data + ", ";
+            textBox1PW.Text += data + ", ";
+            textBox1FN.Text += data + ", ";
+            textBox1LN.Text += data + ", ";
+            textBox1PN.Text += data + ", ";
+            textBox1Em.Text += data + ", ";
+            label10TEST.Text = data.ToString();
 
-            var user = new User();
-            user.Email
+            //var user = new User();
+
         }
     }
 }
