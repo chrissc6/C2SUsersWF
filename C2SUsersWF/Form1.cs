@@ -59,7 +59,12 @@ namespace C2SUsersWF
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Made by: Chris C", "User DB Connection About");
+            MessageBox.Show("Made by: Chris C \nAt MAX .Net bootcamp", "User DB Connection About");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
