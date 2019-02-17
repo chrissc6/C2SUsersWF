@@ -129,78 +129,91 @@ namespace C2SUsersWF
             
             int id = Int32.Parse(dataUPK);
             User userpk = User.GetUserByPrimaryKey(id);
-            label12.Text = dataUPK.ToString();
+            if (userpk != null)
+            {
+                //label10TEST.Text = "Query successful!";
+                //label12.Text = $"{id}";
 
-            if(dataUN != null)
-            {
-                userpk.Username = dataUN;
-            }
-            if(data2PW != null)
-            {
-                userpk.Password = data2PW;
-            }
-            if (data3FN != null)
-            {
-                userpk.Firstname = data3FN;
-            }
-            if (data4LN != null)
-            {
-                userpk.Lastname = data4LN;
-            }
-            if (data5PN != null)
-            {
-                userpk.Phone = data5PN;
-            }
-            if (data6EM != null)
-            {
-                userpk.Email = data6EM;
-            }
-            if(data7 != null)
-            {
-                if(data7 == true)
+                label12.Text = dataUPK.ToString();
+
+                if (dataUN != null)
                 {
-                    userpk.IsReviewer = true;
+                    userpk.Username = dataUN;
+                }
+                if (data2PW != null)
+                {
+                    userpk.Password = data2PW;
+                }
+                if (data3FN != null)
+                {
+                    userpk.Firstname = data3FN;
+                }
+                if (data4LN != null)
+                {
+                    userpk.Lastname = data4LN;
+                }
+                if (data5PN != null)
+                {
+                    userpk.Phone = data5PN;
+                }
+                if (data6EM != null)
+                {
+                    userpk.Email = data6EM;
+                }
+                if (data7 != null)
+                {
+                    if (data7 == true)
+                    {
+                        userpk.IsReviewer = true;
+                    }
+                    else
+                        userpk.IsReviewer = false;
                 }
                 else
-                    userpk.IsReviewer = false;
-            }
-            else
-            {
-                userpk.IsReviewer = userpk.IsReviewer;
-            }
-            if (data8 != null)
-            {
-                if (data8 == true)
                 {
-                    userpk.IsAdmin = true;
+                    userpk.IsReviewer = userpk.IsReviewer;
+                }
+                if (data8 != null)
+                {
+                    if (data8 == true)
+                    {
+                        userpk.IsAdmin = true;
+                    }
+                    else
+                        userpk.IsAdmin = false;
                 }
                 else
-                    userpk.IsAdmin = false;
-            }
-            else
-            {
-                userpk.IsAdmin = userpk.IsAdmin;
-            }
-            //if (data8 != null)
-            //{
-            //    userpk.IsAdmin = true;
-            //}
-            //else
-            //{
-            //    userpk.IsAdmin = userpk.IsAdmin;
-            //}
+                {
+                    userpk.IsAdmin = userpk.IsAdmin;
+                }
+                //if (data8 != null)
+                //{
+                //    userpk.IsAdmin = true;
+                //}
+                //else
+                //{
+                //    userpk.IsAdmin = userpk.IsAdmin;
+                //}
 
-            var updateSuccess = User.UpdateUser(userpk);
-            if (updateSuccess)
-            {
-                label10TEST.Text = "Update successful!";
-                label10WARun.Text = "";
-            } 
+                var updateSuccess = User.UpdateUser(userpk);
+                if (updateSuccess)
+                {
+                    label10TEST.Text = "Update successful!";
+                    label10WARun.Text = "";
+                }
+                else
+                {
+                    label10TEST.Text = "Update failed: *Username not unique, or Connection failed*";
+                    label10WARun.Text = "< Username already in use*";
+                }
+
+            }
             else
             {
-                label10TEST.Text = "Update failed: *Username not unique, or Connection failed*";
-                label10WARun.Text = "< Username already in use*";
+                label10TEST.Text = "Update failed: *No user by that id, or Connection failed*";
+                return;
             }
+            
 
 
 
