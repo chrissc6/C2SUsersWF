@@ -245,7 +245,7 @@
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(500, 294);
+            this.label11.Location = new System.Drawing.Point(522, 312);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(124, 29);
             this.label11.TabIndex = 39;
@@ -253,7 +253,7 @@
             // 
             // textBox1USERid
             // 
-            this.textBox1USERid.Location = new System.Drawing.Point(627, 298);
+            this.textBox1USERid.Location = new System.Drawing.Point(649, 316);
             this.textBox1USERid.Name = "textBox1USERid";
             this.textBox1USERid.Size = new System.Drawing.Size(100, 20);
             this.textBox1USERid.TabIndex = 40;
@@ -264,7 +264,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label12.Location = new System.Drawing.Point(557, 298);
+            this.label12.Location = new System.Drawing.Point(564, 349);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(0, 20);
             this.label12.TabIndex = 41;
