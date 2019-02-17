@@ -32,6 +32,13 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>UdbC.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Win32Resource>
+    </Win32Resource>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -54,11 +61,29 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="userDELETE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="userDELETE.Designer.cs">
+      <DependentUpon>userDELETE.cs</DependentUpon>
+    </Compile>
     <Compile Include="userINSERT.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="userINSERT.Designer.cs">
       <DependentUpon>userINSERT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userQUERY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="userQUERY.Designer.cs">
+      <DependentUpon>userQUERY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userUPDATE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="userUPDATE.Designer.cs">
+      <DependentUpon>userUPDATE.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -72,8 +97,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="userDELETE.resx">
+      <DependentUpon>userDELETE.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="userINSERT.resx">
       <DependentUpon>userINSERT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userQUERY.resx">
+      <DependentUpon>userQUERY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userUPDATE.resx">
+      <DependentUpon>userUPDATE.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -93,6 +127,9 @@
       <Project>{1d2ecf76-99eb-4c13-b7ec-702f157ce375}</Project>
       <Name>PrsLibrary</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="UdbC.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
